@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cmN-PB-2pF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="j01-8q-v6K">
+            <objects>
+                <viewController id="cmN-PB-2pF" customClass="ViewController" customModule="iTunesSearchapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lQw-Sy-hle">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="BLK-yD-TmH">
+                                <rect key="frame" x="20.5" y="92" width="373" height="123"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-yg-xaQ">
+                                        <rect key="frame" x="19" y="0.0" width="335" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7i8-6E-tzS">
+                                        <rect key="frame" x="112" y="63" width="149" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                        <connections>
+                                            <action selector="searchPressed:" destination="cmN-PB-2pF" eventType="touchUpInside" id="U4S-up-Hhm"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRS-gQ-wCb">
+                                        <rect key="frame" x="19" y="123" width="335" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2mh-yg-xaQ" firstAttribute="width" secondItem="BLK-yD-TmH" secondAttribute="width" multiplier="0.9" id="Ad4-fF-mWc"/>
+                                    <constraint firstItem="aRS-gQ-wCb" firstAttribute="width" secondItem="BLK-yD-TmH" secondAttribute="width" multiplier="0.9" id="gxg-0z-igf"/>
+                                    <constraint firstItem="7i8-6E-tzS" firstAttribute="width" secondItem="BLK-yD-TmH" secondAttribute="width" multiplier="0.4" id="sAp-BG-nXJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kJ6-L7-S4A"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BLK-yD-TmH" firstAttribute="centerX" secondItem="kJ6-L7-S4A" secondAttribute="centerX" id="4rV-Kj-4G7"/>
+                            <constraint firstItem="BLK-yD-TmH" firstAttribute="width" secondItem="kJ6-L7-S4A" secondAttribute="width" multiplier="0.9" id="gy4-sR-8Zs"/>
+                            <constraint firstItem="BLK-yD-TmH" firstAttribute="top" secondItem="kJ6-L7-S4A" secondAttribute="top" constant="48" id="xQB-Vs-8Y8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultsLabel" destination="aRS-gQ-wCb" id="k1M-yf-Cm8"/>
+                        <outlet property="searchTextField" destination="2mh-yg-xaQ" id="cXx-6b-Ag9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25O-u7-nUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94.20289855072464" y="117.1875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
